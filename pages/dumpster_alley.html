@@ -3,34 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruffles' Adventure - [Page Name]</title>
+    <title>Ruffles' Adventure - Dumpster Alley Shenanigans</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Ruffles' Adventure</h1>
-            <p>[Page Subtitle]</p>
+            <p>Dumpster Diving Delights</p>
         </div>
         <div class="content">
-            <h2>[Scene Title]</h2>
-            <p>[Scene Description]</p>
+            <h2>Welcome to Your Kingdom of Trash!</h2>
+            <p>Ah, Dumpster Alley - the sweet aroma of yesterday's leftovers mingles with the pungent bouquet of questionable life choices. You, the illustrious Ruffles, wake up in your cardboard palace, ready to embrace another day of chaotic possibilities.</p>
+            
+            <p>As you stretch your limbs (and possibly some unidentified muscles), you notice a few intriguing options for starting your day:</p>
             
             <div id="choices">
-                <!-- Choices will be dynamically inserted here -->
+                <button class="button" onclick="makeChoice('investigate_noise')">Investigate the mysterious rustling noise coming from the dumpster</button>
+                <button class="button" onclick="makeChoice('greet_rat')">Strike up a conversation with your loyal rat companion, Squeakers</button>
+                <button class="button" onclick="makeChoice('fashion_show')">Host an impromptu fashion show with your finely curated trash couture</button>
+                <button class="button" onclick="makeChoice('leave_alley')">Venture forth into the city, seeking new horizons (and possibly better-smelling dumpsters)</button>
             </div>
         </div>
     </div>
 
     <div class="sidebar">
         <div id="character-info">
-            <!-- Character stats will be dynamically inserted here -->
+            <h3>Ruffles' Stats</h3>
+            <p>Chaos: <span id="chaos-stat">0</span></p>
+            <p>Street Smarts: <span id="street-smarts-stat">0</span></p>
+            <p>Luck: <span id="luck-stat">0</span></p>
+            <p>Hygiene: <span id="hygiene-stat">100</span></p>
         </div>
         <div id="inventory">
-            <!-- Inventory items will be dynamically inserted here -->
+            <h3>Inventory</h3>
+            <ul id="inventory-list">
+                <!-- Inventory items will be dynamically inserted here -->
+            </ul>
         </div>
         <div id="goblin-meter">
-            <!-- Goblin mode meter will be dynamically inserted here -->
+            <h3>Goblin Meter</h3>
+            <div id="goblin-meter-fill"></div>
         </div>
     </div>
 
@@ -43,5 +56,15 @@
     <script src="../js/game.js"></script>
     <script src="../js/inventory.js"></script>
     <script src="../js/save.js"></script>
+    <script>
+        // Initialize the scene
+        document.addEventListener('DOMContentLoaded', () => {
+            currentLocation = 'dumpster_alley';
+            loadScene(currentLocation);
+            updateCharacterInfo();
+            updateInventory();
+            updateGoblinMeter();
+        });
+    </script>
 </body>
 </html>
