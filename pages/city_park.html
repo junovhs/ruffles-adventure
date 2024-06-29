@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruffles' Adventure - [Page Name]</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ruffles' Adventure</h1>
+            <p>[Page Subtitle]</p>
+        </div>
+        <div class="content">
+            <h2>[Scene Title]</h2>
+            <p>[Scene Description]</p>
+            
+            <div id="choices">
+                <!-- Choices will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div id="character-info">
+            <!-- Character stats will be dynamically inserted here -->
+        </div>
+        <div id="inventory">
+            <!-- Inventory items will be dynamically inserted here -->
+        </div>
+        <div id="goblin-meter">
+            <!-- Goblin mode meter will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <div class="persistent-controls">
+        <button id="save-game">Save Game</button>
+        <button id="load-game">Load Game</button>
+        <a href="../index.html" class="persistent-button">Reset Adventure</a>
+    </div>
+
+    <script src="../js/game.js"></script>
+    <script src="../js/inventory.js"></script>
+    <script src="../js/save.js"></script>
+</body>
+</html>
