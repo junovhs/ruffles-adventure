@@ -1,0 +1,137 @@
+<style>
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #2a0a0a;
+  margin: 0;
+  padding: 0;
+  color: #ff9900;
+  font-size: 18px;
+}
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px 10px 60px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="50" font-family="Arial" font-size="20" fill="rgba(255,153,0,0.1)">CHAOS</text></svg>');
+}
+.header {
+  background-color: #8b0000;
+  color: #ff9900;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 10px rgba(255,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+}
+.header::before, .header::after {
+  content: "👹";
+  font-size: 24px;
+  position: absolute;
+  animation: goblinDance 3s linear infinite;
+}
+.header::before { left: 10%; top: -20px; }
+.header::after { right: 15%; top: -30px; animation-delay: 1.5s; }
+@keyframes goblinDance {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(15deg); }
+  50% { transform: translate(0, 10px) rotate(-15deg); }
+  75% { transform: translate(-5px, 5px) rotate(15deg); }
+}
+.content {
+  background-color: rgba(50, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+}
+.content::before {
+  content: "🔥";
+  position: absolute;
+  font-size: 20px;
+  animation: fireSpread 8s infinite;
+}
+@keyframes fireSpread {
+  0%, 100% { top: 10%; left: 10%; transform: scale(1); }
+  25% { top: 50%; left: 80%; transform: scale(1.5); }
+  50% { top: 80%; left: 20%; transform: scale(1); }
+  75% { top: 30%; left: 50%; transform: scale(1.5); }
+}
+.button {
+  display: block;
+  background-color: #ff4500;
+  color: #fff;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 15px 0;
+  transition: all 0.3s;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(255,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.button::after {
+  content: "😈";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.button:hover {
+  background-color: #ff6347;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(255,0,0,0.5);
+}
+.pixel-art {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  image-rendering: pixelated;
+  margin: 20px auto;
+  display: block;
+  border: 5px solid #8b0000;
+  box-shadow: 0 0 10px rgba(255,0,0,0.5);
+}
+h1, h2, h3 {
+  text-shadow: 2px 2px 4px rgba(255,0,0,0.5);
+}
+.chaos-decor {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.5;
+  pointer-events: none;
+  animation: chaosFloat 10s linear infinite;
+}
+@keyframes chaosFloat {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, -10px) rotate(90deg); }
+  50% { transform: translate(20px, 0) rotate(180deg); }
+  75% { transform: translate(-10px, 10px) rotate(270deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+.persistent-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(139, 0, 0, 0.8);
+  padding: 10px;
+  text-align: center;
+}
+.persistent-button {
+  display: inline-block;
+  background-color: #ff9900;
+  color: #8b0000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+.persistent-button:hover {
+  background-color: #ffcc00;
+  transform: translateY(-3px);
+}
+</style>
