@@ -1,57 +1,50 @@
-<html><head><base href="https://rufflesadventure.com/gallery_sneak.html/gallery_goblin.html"><title>Ruffles' Adventure - Goblin Mode Activated!</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ruffles' Adventure - Embrace the Chaos!</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
   <div class="header">
     <h1>Ruffles' Adventure</h1>
-    <p>Goblin Mode Activated!</p>
+    <p>Embrace Your Inner Goblin!</p>
   </div>
   <div class="content">
-    <h2>Chaos Reigns Supreme!</h2>
-    <p>In a moment of pure, unbridled madness, Ruffles decides to embrace his inner goblin. His eyes gleam with mischievous fire as he sheds the last vestiges of societal norms. The art gallery is about to experience a performance piece like no other!</p>
+    <h2>Welcome to a World of Glorious Chaos!</h2>
+    <p>Are you ready to embark on a journey of mischief, mayhem, and questionable life choices? Step into the grimy shoes of Ruffles, a character with a penchant for chaos and a complete disregard for societal norms!</p>
     
-    <img class="pixel-art" src="ruffles_goblin.png" alt="Pixel art of Ruffles in full goblin mode, wreaking havoc in the art gallery, swinging from chandeliers and flinging paint everywhere" width="300" height="225">
+    <img class="pixel-art" src="images/ruffles_portrait.png" alt="A mischievous portrait of Ruffles, ready for chaos" width="300" height="300">
     
-    <p>With a primal screech that would make a banshee proud, Ruffles launches into action:</p>
+    <p>In this adventure, you'll:</p>
     
     <ul>
-      <li>He grabs a nearby bucket of paint and starts flinging it everywhere, creating a Jackson Pollock nightmare on steroids.</li>
-      <li>Cackling maniacally, he swings from the chandelier, showering bewildered patrons with bits of crystal and expletives.</li>
-      <li>In a stroke of demented genius, he starts eating the finger foods... with his feet.</li>
-      <li>He declares himself "The Trash King" and demands that everyone bow before him or face the wrath of his "royal scepter" (a half-eaten corn dog he found in his pocket).</li>
+      <li>Navigate the urban jungle, from dumpster alleys to high-society art galleries</li>
+      <li>Make choices that range from "mildly questionable" to "absolute goblin-mode chaos"</li>
+      <li>Collect an assortment of peculiar items (Is that a half-eaten corn dog or a royal scepter?)</li>
+      <li>Build up your Goblin Meter to unlock truly outrageous actions</li>
+      <li>Aim for glory, infamy, or just a really good nap in a cozy dumpster</li>
     </ul>
     
-    <p>The crowd's reaction is a delightful mix of horror, fascination, and grudging respect. Some flee in terror, while others whip out their phones, certain they're witnessing the birth of the next great art movement.</p>
+    <p>Remember, in Ruffles' world, there are no wrong choices - only varying degrees of hilarious consequences!</p>
     
-    <p>As security guards approach with a mix of fear and determination, Ruffles must decide his next move in this chaotic masterpiece. What's it gonna be, oh Lord of Lunacy?</p>
+    <a href="pages/dumpster_alley.html" class="button" id="new-game">Start New Adventure</a>
+    <a href="#" class="button" id="load-game">Continue Existing Chaos</a>
     
-    <a href="gallery_escape.html" class="button">Make a daring escape through the skylight, using a stolen painting as a parachute</a>
-    <a href="gallery_sermon.html" class="button">Climb atop a sculpture and deliver an impromptu, nonsensical sermon about the virtues of dumpster diving</a>
-    <a href="gallery_barricade.html" class="button">Barricade yourself in the men's room and declare it the sovereign nation of Trashlandia</a>
-    <a href="gallery_surrender.html" class="button">Surrender dramatically, demanding a lawyer and your right to one phone call to the "Intergalactic Council of Hobos"</a>
-    
-    <p>Remember, in goblin mode, there are no wrong choices - only varying degrees of glorious chaos!</p>
+    <p>Disclaimer: No actual goblins were harmed in the making of this game. The same cannot be said for social etiquette.</p>
   </div>
 </div>
 
-<div class="persistent-controls">
-  <a href="index.html" class="persistent-button">Reset Adventure</a>
-  <a href="about.html" class="persistent-button">About Ruffles</a>
-</div>
-
+<script src="js/game.js"></script>
+<script src="js/inventory.js"></script>
+<script src="js/save.js"></script>
 <script>
-// Add random chaos decorations
-const chaosItems = ['🎭', '💥', '🌪️', '🔥', '👹', '💀'];
-for (let i = 0; i < 15; i++) {
-  const chaos = document.createElement('span');
-  chaos.textContent = chaosItems[Math.floor(Math.random() * chaosItems.length)];
-  chaos.className = 'chaos-decor';
-  chaos.style.left = Math.random() * 100 + '%';
-  chaos.style.top = Math.random() * 100 + '%';
-  document.body.appendChild(chaos);
-}
+  document.getElementById('load-game').addEventListener('click', (e) => {
+    e.preventDefault();
+    loadGame();
+  });
 </script>
 </body>
 </html>
