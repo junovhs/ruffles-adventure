@@ -1,28 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruffles' Adventure</title>
-    <style>
-        body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #2a0a0a;
-            color: #ff9900;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(255,0,0,0.5);
-        }
-        p {
-            font-size: 1.2em;
-        }
-    </style>
+<html><head><base href="https://rufflesadventure.com/gallery_sneak.html/gallery_goblin.html"><title>Ruffles' Adventure - Goblin Mode Activated!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #2a0a0a;
+  margin: 0;
+  padding: 0;
+  color: #ff9900;
+  font-size: 18px;
+}
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px 10px 60px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="50" font-family="Arial" font-size="20" fill="rgba(255,153,0,0.1)">CHAOS</text></svg>');
+}
+.header {
+  background-color: #8b0000;
+  color: #ff9900;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 10px rgba(255,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+}
+.header::before, .header::after {
+  content: "👹";
+  font-size: 24px;
+  position: absolute;
+  animation: goblinDance 3s linear infinite;
+}
+.header::before { left: 10%; top: -20px; }
+.header::after { right: 15%; top: -30px; animation-delay: 1.5s; }
+@keyframes goblinDance {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(15deg); }
+  50% { transform: translate(0, 10px) rotate(-15deg); }
+  75% { transform: translate(-5px, 5px) rotate(15deg); }
+}
+.content {
+  background-color: rgba(50, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+}
+.content::before {
+  content: "🔥";
+  position: absolute;
+  font-size: 20px;
+  animation: fireSpread 8s infinite;
+}
+@keyframes fireSpread {
+  0%, 100% { top: 10%; left: 10%; transform: scale(1); }
+  25% { top: 50%; left: 80%; transform: scale(1.5); }
+  50% { top: 80%; left: 20%; transform: scale(1); }
+  75% { top: 30%; left: 50%; transform: scale(1.5); }
+}
+.button {
+  display: block;
+  background-color: #ff4500;
+  color: #fff;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 15px 0;
+  transition: all 0.3s;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(255,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.button::after {
+  content: "😈";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.button:hover {
+  background-color: #ff6347;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(255,0,0,0.5);
+}
+.pixel-art {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  image-rendering: pixelated;
+  margin: 20px auto;
+  display: block;
+  border: 5px solid #8b0000;
+  box-shadow: 0 0 10px rgba(255,0,0,0.5);
+}
+h1, h2, h3 {
+  text-shadow: 2px 2px 4px rgba(255,0,0,0.5);
+}
+.chaos-decor {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.5;
+  pointer-events: none;
+  animation: chaosFloat 10s linear infinite;
+}
+@keyframes chaosFloat {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, -10px) rotate(90deg); }
+  50% { transform: translate(20px, 0) rotate(180deg); }
+  75% { transform: translate(-10px, 10px) rotate(270deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+.persistent-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(139, 0, 0, 0.8);
+  padding: 10px;
+  text-align: center;
+}
+.persistent-button {
+  display: inline-block;
+  background-color: #ff9900;
+  color: #8b0000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+.persistent-button:hover {
+  background-color: #ffcc00;
+  transform: translateY(-3px);
+}
+</style>
 </head>
 <body>
-    <h1>Welcome to Ruffles' Adventure</h1>
-    <p>Get ready for a chaotic journey! More content coming soon...</p>
+<div class="container">
+  <div class="header">
+    <h1>Ruffles' Adventure</h1>
+    <p>Goblin Mode Activated!</p>
+  </div>
+  <div class="content">
+    <h2>Chaos Reigns Supreme!</h2>
+    <p>In a moment of pure, unbridled madness, Ruffles decides to embrace his inner goblin. His eyes gleam with mischievous fire as he sheds the last vestiges of societal norms. The art gallery is about to experience a performance piece like no other!</p>
+    
+    <img class="pixel-art" src="ruffles_goblin.png" alt="Pixel art of Ruffles in full goblin mode, wreaking havoc in the art gallery, swinging from chandeliers and flinging paint everywhere" width="300" height="225">
+    
+    <p>With a primal screech that would make a banshee proud, Ruffles launches into action:</p>
+    
+    <ul>
+      <li>He grabs a nearby bucket of paint and starts flinging it everywhere, creating a Jackson Pollock nightmare on steroids.</li>
+      <li>Cackling maniacally, he swings from the chandelier, showering bewildered patrons with bits of crystal and expletives.</li>
+      <li>In a stroke of demented genius, he starts eating the finger foods... with his feet.</li>
+      <li>He declares himself "The Trash King" and demands that everyone bow before him or face the wrath of his "royal scepter" (a half-eaten corn dog he found in his pocket).</li>
+    </ul>
+    
+    <p>The crowd's reaction is a delightful mix of horror, fascination, and grudging respect. Some flee in terror, while others whip out their phones, certain they're witnessing the birth of the next great art movement.</p>
+    
+    <p>As security guards approach with a mix of fear and determination, Ruffles must decide his next move in this chaotic masterpiece. What's it gonna be, oh Lord of Lunacy?</p>
+    
+    <a href="gallery_escape.html" class="button">Make a daring escape through the skylight, using a stolen painting as a parachute</a>
+    <a href="gallery_sermon.html" class="button">Climb atop a sculpture and deliver an impromptu, nonsensical sermon about the virtues of dumpster diving</a>
+    <a href="gallery_barricade.html" class="button">Barricade yourself in the men's room and declare it the sovereign nation of Trashlandia</a>
+    <a href="gallery_surrender.html" class="button">Surrender dramatically, demanding a lawyer and your right to one phone call to the "Intergalactic Council of Hobos"</a>
+    
+    <p>Remember, in goblin mode, there are no wrong choices - only varying degrees of glorious chaos!</p>
+  </div>
+</div>
+
+<div class="persistent-controls">
+  <a href="index.html" class="persistent-button">Reset Adventure</a>
+  <a href="about.html" class="persistent-button">About Ruffles</a>
+</div>
+
+<script>
+// Add random chaos decorations
+const chaosItems = ['🎭', '💥', '🌪️', '🔥', '👹', '💀'];
+for (let i = 0; i < 15; i++) {
+  const chaos = document.createElement('span');
+  chaos.textContent = chaosItems[Math.floor(Math.random() * chaosItems.length)];
+  chaos.className = 'chaos-decor';
+  chaos.style.left = Math.random() * 100 + '%';
+  chaos.style.top = Math.random() * 100 + '%';
+  document.body.appendChild(chaos);
+}
+</script>
 </body>
 </html>
